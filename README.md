@@ -35,7 +35,7 @@ Before starting this step data splitted into 70% train and 30% test sets.
 
 During EDA proccess, an imbalanced pattern in classes determind. This skewness would couse bias in prediction and therfore a poor performance in the model, hence I applied SMOTE an oversampling technique to handle this problem. 
 
-Feature engineering is done with correlation matrix and features with negative correlation are removed 
+Feature selection is done with correlation matrix and features with negative correlation are removed 
 
 # Modeling step 
 
