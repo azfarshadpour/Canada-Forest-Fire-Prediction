@@ -29,6 +29,26 @@ Below is the description of features in the dataset based on NASA website: https
    - 2 = other static land source
    - 3 = offshore detection (includes all detections over water) 
 - DayNight : Day or Night - D= Daytime fire, N= Nighttime fire 
+# Data pre-proccessing 
+
+Before starting this step data splitted into 70% train and 30% test sets.  
+
+During EDA proccess, an imbalanced pattern in classes determind. This skewness would couse bias in prediction and therfore a poor performance in the model, hence I applied SMOTE an oversampling technique to handle this problem. 
+
+Feature engineering is done with correlation matrix and features with negative correlation are removed 
+
+# Modeling step 
+
+This step started with defining target variable which is 'confidence'(y) and then dropping from dataframe to define independant variables(X). 
+
+Because it is a multi-classification problem the following algorithms are tested to check which one has a better accuracy. 
+- Naive bayes classifier
+- Random Forest
+- XGboost 
+
+For Random Forest and XGBoost hyperparameters are tunned with Gridsearch. 
+As a result and after measuring metrics such as precision, recall, f1 score as well as confusion matrix, Random Forest and XGboost demonstrate an accuracy of 98.76% for test set. 
+
 
 
 
